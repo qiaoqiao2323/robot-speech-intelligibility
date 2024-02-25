@@ -61,7 +61,7 @@ To show the end window, you can use two methods :
 	1.Finish the test after using 30 balloons
 	2.Use the "quit" button and after push the "yes" button to confirm the end of the experiment.
 
-If another  method is used to close the BART test, some data will be lost (pound earned, time in millisecond between
+If another Â method is used to close the BART test, some data will be lost (pound earned, time in millisecond between
 two clicks, the time in seconds on the game and the time of the end of the experiment).
 
 To access at results files, go in the "BART" folder and after in the "results" folder.
@@ -74,7 +74,7 @@ Names of results files are in the shape of "results_participantID.txt".
 This test is like a normal BART test.
 It will be asked to the participant to blow up 30 balloons, one after another, each pump will provide more money if
 the balloon doesn't explode before the participant uses the "collect reward button". 
-The robot reacts at each collect of money or when the balloon explodes. The robot will react also if the participant
+TheÂ robot reacts at each collect of money or when the balloon explodes. The robot will react also if the participant
 wants to quit the test before the end of the experiment by using the "quit" button (if the participant decides to 
 quit the test before the end then he will earn noting).
 Apart from these interventions, the robot will react for six balloons at most during the test.
