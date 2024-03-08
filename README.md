@@ -74,7 +74,7 @@ parlai eval_model -t internal:opener_text -mf <TRAINED_MODEL_FILE> -dt test --me
 
 Model weights can be made available upon request.
 
-## Running on Furhat
+## Running on Nao
 
 Finally, you can also run a live demo of the system on a physical (or virtual) Furhat robot. For this, you need to run the following code. The python scripts require the `pyzmq` package.
 
