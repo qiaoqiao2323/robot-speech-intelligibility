@@ -90,35 +90,22 @@ Attention: if you quit the test before the end, you will not earn anything. If y
 
 To bridge the communication between Python 2.7 (NaoQi) and Python 3.8 (ETV and JMRE model), the subprocess module facilitates communication. 
 
-`parlai_internal/` contains the code needed to train and evaluate on our task in the ParlAI framework. Check the original [ParlAI repository](https://github.com/facebookresearch/ParlAI) for more information on how to use the ParlAI framework and how to use a `parlai_internal` folder to define custom tasks.
+- `Evaluation.py` is the word recognition task for evaluation process.
 
-The folder contains two tasks: `text_opener` and `text_opener_lowfreq`. They present the captions as input for the ParlAI model and the conversation-starting question as expected output. `text_opener_lowfreq` uses the training set without the six most common questions, as described above. `text_opener` uses the full data set.
 
-The code for these tasks is based on the `mnist_qa` task included in ParlAI.
-
-Place the data set files in a folder `data/opener_text/` in your ParlAI folder.
-
-We used the following commands to train and evaluate the BART model on this task:
+We used the following code in the script to take the annoyance rating from the APR model as input of the adaptive speech model:
 
 ```
-parlai train_model -m bart --init-model zoo:bart/bart_large/model -mf <MODEL_OUTPUT_FILE> -t internal:opener_text_lowfreq -bs 24 --fp16 true -eps 10 -lr 1e-6 --optimizer adam --inference beam --beam-size 5 --validation-every-n-epochs 8 --metrics all --validation-metric bleu-4
-```
-```
-parlai eval_model -mf <TRAINED_MODEL_FILE> -t internal:opener_text -dt test -rf <EVALUATION_OUTPUT_FILE> --save-world-logs True --inference beam --beam-size 5
-```
-
-We trained the BART model using an NVIDIA Tesla V100 GPU, with 32GB of VRAM. Inference was done using an NVIDIA GeForce GTX 1080 Ti GPU with 11GB VRAM.
-
-The baseline retrieval model was trained and evaluated using these commands (using only a CPU):
-
-```
-parlai train_model -m tfidf_retriever -t internal:opener_text_lowfreq -mf <MODEL_OUTPUT_FILE> -dt train:ordered -eps 1 --retriever-tokenizer simple --retriever-ngram 3
-```
-```
-parlai eval_model -t internal:opener_text -mf <TRAINED_MODEL_FILE> -dt test --metrics all -rf <EVALUATION_OUTPUT_FILE> --save-world-logs True
+            proc = subprocess.Popen([r"C:\anaconda3\envs\python38\python.exe",
+                                     r"C:\Users\Administrator\OneDrive - UGent\Desktop\english-words-master\adam.py"],
+                                    stdout=subprocess.PIPE, stdin=subprocess.PIPE)
 ```
 
-Model weights can be made available upon request.
+We trained the adaptive speech model using a CPU.
+
+## Demos
+
+`Demos/` contains the demo of adaptive speech condition, robot default voice, and the recommend threshold of the slower speech speed.
 
 ## Running on Nao
 
@@ -137,8 +124,5 @@ python3 ~/ParlAI/parlai/chat_service/services/browser_chat/run.py --config-path 
 
 For any further questions, do not hesitate to contact Qiaoqiao[dot]Ren[at]ugent[dot]be or Yuanbo[dot]Hou[at]ugent[dot]be. You can also always raise an issue in the repository.
 
-## Demos
-
-Finally, you can also run a live demo of the system on a physical (or virtual) Furhat robot.
 
 <!--<script> window.scroll(0,100000) </script> -->
