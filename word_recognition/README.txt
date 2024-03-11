@@ -14,6 +14,7 @@ Modify the IP address in the file by replacing it with the IP address given by t
 The IP address should be like : 192.168.1.13
 Save the "data.txt" file.
 
+## Run the game
 We used the following commands to train and evaluate the BART model on this task:
 
 ```
