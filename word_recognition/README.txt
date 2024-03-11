@@ -6,21 +6,6 @@ To install : Python 2.7 (https://www.python.org/downloads/)
 	     kivy library (https://kivy.org/#download)
 	     naoqi library
 
-Unzip the BART folder
-
-Open the ".py" file that you want to use. you are going to have six options :
-	1.one type of balloon, with a robot which encourages the participant to take risks
-	BART_objet_incite.py
-	2. one type of balloon, with a careful robot which doesn't want to take any risk
-	BART_objet_careful.py
-	3.one type of balloon, with no robot
-	BART_objet.py
-	4.three types of balloons, with a robot which encourages the participant to take risks
-	BART_3_bal_incite.py
-	5.three types of balloons, with a careful robot which doesn't want to take any risk
-	BART_3_bal_careful.py
-	6.three types of balloons, with no robot
-	BART_3_balloon.py
 
 For tests with one balloon, all balloons will explode between 1 and 127 pumps according to a random function with 
 an uniform distribution.
@@ -34,24 +19,10 @@ Modify the IP address in the file by replacing it with the IP address given by t
 The IP address should be like : 192.168.1.13
 Save the "data.txt" file.
 
-Open the ".bat" file equivalent to the program chosen.
-This file contains one line.
-This line is a combination of two parts:
-	1."C:\Program Files (x86)\Python27\python"
-	2.%dp0\BART_objet_incite.py
-
-If you haven't "BART_objet_incite.py" at the end of this part, it is normal. Don't change this second part.
-
-The first part is the place where python is downloaded in your computer. This part should be like 
-"C:\Program Files (x86)\Python27\python" or like "C:\Python27\python".
-Place quotation marks for this part.
-Save the ".bat" file and close it.
-
-Do a right click on the ".bat" file previously modified, select "run as administrator" and give the required 
-password.
+Run the 
 
 A window will appear on the screen requesting the ID of the participant.
-The participant ID permits to save different observations collected during the BART test in a file text proper to 
+The participant ID permits to save different observations collected during the word recognition test in a file text proper to 
 the participant.
 Two participants can't have the same ID.
 
