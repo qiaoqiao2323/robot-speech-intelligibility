@@ -17,7 +17,10 @@ Save the "data.txt" file.
 We used the following commands to train and evaluate the BART model on this task:
 
 ```
-python main.py
+parlai train_model -m bart --init-model zoo:bart/bart_large/model -mf <MODEL_OUTPUT_FILE> -t internal:opener_text_lowfreq -bs 24 --fp16 true -eps 10 -lr 1e-6 --optimizer adam --inference beam --beam-size 5 --validation-every-n-epochs 8 --metrics all --validation-metric bleu-4
+```
+```
+parlai eval_model -mf <TRAINED_MODEL_FILE> -t internal:opener_text -dt test -rf <EVALUATION_OUTPUT_FILE> --save-world-logs True --inference beam --beam-size 5
 ```
 
 A window will appear on the screen requesting the ID of the participant.
