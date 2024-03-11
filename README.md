@@ -80,7 +80,7 @@ Each correct letter earns you a point, and incorrect or incomplete answers recei
 and start with a new word. Remember, you have 50 words in total.
 Attention: if you quit the test before the end, you will not earn anything. If you have questions, it is the right time to ask! Good luck! 
 
-##Pretained model
+## Pretained model
 
 `Pretrained_model/` contains the source code and pre-trained adaptive speech model
 
