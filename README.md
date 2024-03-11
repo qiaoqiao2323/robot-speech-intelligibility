@@ -26,11 +26,12 @@ To run the pretrained ARP models, please refer to `Annoyance_rating_prediction/.
 ## Word recognition game
 
 `word_recognition/` contains code that we used for running the captioning model.
+`NU_6_words/` contains open-set recognition of four lists of English consonant-nucleus-consonant (CNC) monosyllabic words (e.g. hash, dodge, should) from the Northwestern University Auditory Test 6 (NU-6)
+ 
 
 - `main.py` is the word recognition task main program for data collection.
-- `batch.py` is a modified version of `lib/tools/demo.py` for generating captions for a batch of images.
+- `game_nointro.py` is a modified version of `word_recognition/main.py` to skip the introduction spoken by the robot.
 
-- `caption_server.py` is a modified version of `lib/tools/demo.py` for live caption generation, e.g. when running the system with Furhat.
 
 ##################################################### Installation ################################################
 
