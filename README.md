@@ -95,6 +95,8 @@ If you have questions, it is the right time to ask! Good luck!  '''
 
 ## Evaluation
 
+To bridge the communication between Python 2.7 (NaoQi) and Python 3.8 (ETV and JMRE model), the subprocess module facilitates communication. 
+
 `parlai_internal/` contains the code needed to train and evaluate on our task in the ParlAI framework. Check the original [ParlAI repository](https://github.com/facebookresearch/ParlAI) for more information on how to use the ParlAI framework and how to use a `parlai_internal` folder to define custom tasks.
 
 The folder contains two tasks: `text_opener` and `text_opener_lowfreq`. They present the captions as input for the ParlAI model and the conversation-starting question as expected output. `text_opener_lowfreq` uses the training set without the six most common questions, as described above. `text_opener` uses the full data set.
