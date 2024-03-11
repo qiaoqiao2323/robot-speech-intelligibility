@@ -119,7 +119,7 @@ Model weights can be made available upon request.
 
 Finally, you can also run a live demo of the system on a physical (or virtual) Furhat robot. For this, you need to run the following code. The python scripts require the `pyzmq` package.
 
-- `VisualConversationStarter/` contains the skill code that should run on the Furhat. You can find instructions on how to run a skill on the robot in the [Furhat documentation](https://docs.furhat.io/skills/#running-a-skill-on-a-robot). Inspiration for the code was found [in this example skill](https://github.com/FurhatRobotics/tutorials/tree/main/camerafeed-demo).
+You can find instructions on how to run a skill on the robot in the [Furhat documentation](https://docs.furhat.io/skills/#running-a-skill-on-a-robot). 
 - `captioning/captioning_server.py` should be run to generate the captions. No command-line arguments are needed. Follow the instructions above to set up the captioning model.
 - For the question-generating model, run the following command in an environment where you have set up ParlAI and our task(s) as described above. Edit `parlai_internal/config.yml` so `model_file` contains the correct path to your trained model.
 ```
@@ -134,6 +134,6 @@ For any further questions, do not hesitate to contact Qiaoqiao[dot]Ren[at]ugent[
 
 ## Demos
 
-Finally, you can also run a live demo of the system on a physical (or virtual) Furhat robot. For this, you need to run the following code. The python scripts require the `pyzmq` package
+Finally, you can also run a live demo of the system on a physical (or virtual) Furhat robot.
 
 <!--<script> window.scroll(0,100000) </script> -->
