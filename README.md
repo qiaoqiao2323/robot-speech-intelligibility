@@ -1,4 +1,4 @@
-# robot-speech-intelligibility
+# Robot-speech-intelligibility
 
 This repository contains the dataset and code associated with the paper "No More Mumbles: Enhancing Robot Intelligibility through Speech Adaptation", by Qiaoqiao Ren, Yuanbo Hou, Thomas Demeester, and Tony Belpaeme.
 
@@ -13,13 +13,15 @@ Finally, we deployed the system on a Nao social robot.
 This README contains technical instructions to replicate our results. For any further questions, do not hesitate to contact Qiaoqiao[dot]Ren[at]ugent[dot]be.
 
 
-## Annoyance level prediction
+## Ambient sounds’ annoyance rating prediction
 
-`## Annoyance_level_predicition/` contains some examples for the ambient noise. The audio is selected from the [DeLTA (Deep Learning Techniques for noise Annoyance detection) Dataset](https://zenodo.org/records/7158057) and are not hosted in this repository, rather, we refer to the data using their URL.
+`Annoyance_rating_prediction/` contains the training, validation, and testing dataset and the pretrained model for the ambient sounds’ annoyance rating prediction.
 
-This DelTA dataset contains a 2890 by 24 data frame (2890 recordings, each with up to 23 possible labels present and an average annoyance rating). On average, each recording has 3.2 identified sound sources present.
+To train the ARP model to successfully infer the impact of environmental sounds on participants, i.e., the annoyance level for participants, based on acoustic features containing amplitude, frequency, and category information of ambient sounds, we used a real-life polyphonic audio dataset, [DeLTA (Deep Learning Techniques for noise Annoyance detection) Dataset](https://zenodo.org/records/7158057) which is not hosted in this repository, rather, we refer to the data using their URL. The DeLTA contains 2980 samples of 15-second binaural audio recordings with 24 classes of sound sources from European cities for noise annoyance prediction. A remote listening experiment was conducted, which involved participants listening to 15-second binaural recordings of urban environments and being instructed to identify the sound sources present within each recording and to provide an annoyance rating on a scale of 1 to 10. 
 
-###yuanbo
+The proposed annoyance rating prediction (ARP) is trained with the GPU (Tesla V100-SXM2-32GB) and the CPU (Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz). In inference, taking the GPU as Tesla V100-SXM2-32GB and the CPU as Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz as an example, the response time of the model from inputting acoustic features to outputting prediction results is 1.87 ms, which means the model can process input sounds in real-time.
+
+To run the pretrained ARP models, please refer to `Annoyance_rating_prediction/.`
 
 ## Word recognition game
 
