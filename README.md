@@ -47,7 +47,6 @@ Modify the IP address in the file by replacing it with the IP address given by t
 The IP address should be like : 192.168.1.13
 Save the "data.txt" file.
 
-## Run the game
 To run our code, first clone the original repository and follow their install instructions. Replace the `main.py`file as described below.
 We used the following commands to train and evaluate the BART model on this task:
 
@@ -80,6 +79,11 @@ You need to type in your answer, and your pleasantness about the robot voice fro
 Each correct letter earns you a point, and incorrect or incomplete answers receive no points, you can click "Submit" button to submit your answer upon you finish it.
 and start with a new word. Remember, you have 50 words in total.
 Attention: if you quit the test before the end, you will not earn anything. If you have questions, it is the right time to ask! Good luck! 
+
+##Pretained model
+
+`Pretrained_model/` contains the source code and pre-trained adaptive speech model
+
 
 
 ## Evaluation
