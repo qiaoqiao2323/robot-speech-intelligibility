@@ -71,7 +71,7 @@ two clicks, the time in seconds on the game and the time of the end of the exper
 To access at results files, go to the "word_recognition" folder and after in the "results" folder.
 Names of results files are in the shape of "results_participantID.txt".
 
-############################################## Rules the test ####################################################
+#################### Rules the test #########################################
 
 Rules of the game:
 We are going to have a word recognition game. one after the other. The robot will randomly select a word and pronounce each letter one at a time.
