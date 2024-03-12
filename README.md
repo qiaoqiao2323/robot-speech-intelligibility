@@ -48,7 +48,7 @@ The IP address should be like : 192.168.1.13
 Save the "data.txt" file.
 
 To run our code, first clone the original repository and follow their install instructions. Replace the `main.py`file as described below.
-We used the following commands to train and evaluate the BART model on this task:
+We used the following commands to run the task:
 
 ```
 python main.py
@@ -59,7 +59,7 @@ The participant ID permits to save different observations collected during the w
 the participant.
 Two participants can't have the same ID.
 
-To collect each information, close the window by just using the button "close the BART test".
+To collect each information, close the window by just using the button "close the test".
 The button "close the test" appears in the end window when the test is over.
 To show the end window, you can use two methods :
 	1.Finish the test after using 50 words.
