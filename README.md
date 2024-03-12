@@ -6,9 +6,9 @@ In this work, we built an adaptive system that improves the robot's speech intel
 
 Firstly, we build an annoyance level prediction model based on the ambient noise.
 
-To reveal how ambient sound, the environment’s acoustic quality, the distance between the user and the robot, and the user’s hearing can affect both the robot’s intelligibility and the user’s experience, we first set up a data collection campaign.
+To reveal how ambient sound, the environment’s acoustic quality, the distance between the user and the robot, and the user’s hearing can affect both the robot’s intelligibility and the user’s experience, we first set up a data collection campaign by Nao.
 
-Finally, we deployed the system on a Nao social robot.
+Finally, we evaluated the system on a Nao social robot for 27 participants.
 
 This README contains technical instructions to replicate our results. For any further questions, do not hesitate to contact Qiaoqiao[dot]Ren[at]ugent[dot]be.
 
