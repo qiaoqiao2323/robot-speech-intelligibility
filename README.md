@@ -118,7 +118,7 @@ you can find the default voice setting on the [Nao documentation](http://doc.ald
 
 Finally, you can also run a live demo of the system on a physical Nao robot. For this, you need to run the following instructions given by the Evaluation above.
 
-You can find instructions on the Nao robot in the [Nao documentation]([https://docs.furhat.io/skills/#running-a-skill-on-a-robot](http://doc.aldebaran.com/2-1/ref/python-api.html#naoqi-python-api). 
+You can find instructions on the Nao robot in the [Nao documentation]([http://doc.aldebaran.com/2-1/ref/python-api.html#naoqi-python-api]). 
 
 
 ## Contact
