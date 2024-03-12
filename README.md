@@ -80,45 +80,47 @@ Each correct letter earns you a point, and incorrect or incomplete answers recei
 and start with a new word. Remember, you have 50 words in total.
 Attention: if you quit the test before the end, you will not earn anything. If you have questions, it is the right time to ask! Good luck! 
 
+## GLMM model 
+
+`GLMM/` contains the GLMM model in R script
+
+
 ## Pretained model
 
 `Pretrained_model/` contains the source code and pre-trained adaptive speech model
-
-
+We trained the adaptive speech model using a CPU.
 
 ## Evaluation
 
+`Evaluation_task/` contains the code of word recognition tasks with the adaptive system. 
+
 To bridge the communication between Python 2.7 (NaoQi) and Python 3.8 (ETV and JMRE model), the subprocess module facilitates communication. 
 
-- `Evaluation.py` is the word recognition task for evaluation process.
+- `Evaluation.py` is the word recognition task for the evaluation process.
 
 
-We used the following code in the script to take the annoyance rating from the APR model as input of the adaptive speech model:
+We used the following code in the script to take the annoyance rating from the APR model as input for the adaptive speech model:
 
 ```
             proc = subprocess.Popen([r"C:\anaconda3\envs\python38\python.exe",
                                      r"C:\Users\Administrator\OneDrive - UGent\Desktop\english-words-master\adam.py"],
                                     stdout=subprocess.PIPE, stdin=subprocess.PIPE)
 ```
-
-We trained the adaptive speech model using a CPU.
+For online adaption capability, the data collected by the sensor and pre-setting user information can be easily communicated with the Nao by subprocess.
 
 ## Demos
 
-`Demos/` contains the demo of adaptive speech condition, robot default voice, and the recommend threshold of the slower speech speed.
+`Demos/` contains the demo of the adaptive speech condition, the robot's default voice, and the recommended threshold of the slower speech speed (text and code).
+P1-P4 wav file corresponding to the adaptive speech examples in the `adaptive_speech_examples.md/Demos/` 
+you can find the default voice setting on the [Nao documentation](http://doc.aldebaran.com/2-1/naoqi/audio/altexttospeech-api.html#ALTextToSpeechProxy::setParameter__ssCR.floatCR)
+
 
 ## Running on Nao
 
-Finally, you can also run a live demo of the system on a physical (or virtual) Furhat robot. For this, you need to run the following code. The python scripts require the `pyzmq` package.
+Finally, you can also run a live demo of the system on a physical Nao robot. For this, you need to run the following instructions given by the Evaluation above.
 
-You can find instructions on how to run a skill on the robot in the [Furhat documentation](https://docs.furhat.io/skills/#running-a-skill-on-a-robot). 
-- `captioning/captioning_server.py` should be run to generate the captions. No command-line arguments are needed. Follow the instructions above to set up the captioning model.
-- For the question-generating model, run the following command in an environment where you have set up ParlAI and our task(s) as described above. Edit `parlai_internal/config.yml` so `model_file` contains the correct path to your trained model.
-```
-python3 ~/ParlAI/parlai/chat_service/services/browser_chat/run.py --config-path ~/ParlAI/parlai_internal/config.yml --port <QUESTION_GENERATION_PORT>
-```
+You can find instructions on the Nao robot in the [Nao documentation]([https://docs.furhat.io/skills/#running-a-skill-on-a-robot](http://doc.aldebaran.com/2-1/ref/python-api.html#naoqi-python-api). 
 
-- `demo/comparison.txt` that integrates all components: it passes the data around between the Furhat and the models. Before running the script, make sure the IP addresses and ports for all components are correct.
 
 ## Contact
 
