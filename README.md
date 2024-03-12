@@ -32,8 +32,7 @@ To run the pretrained ARP models, please refer to `Annoyance_rating_prediction/.
 - `main.py` is the word recognition task main program for data collection.
 - `game_nointro.py` is a modified version of `word_recognition/main.py` to skip the introduction spoken by the robot.
 
-
-##################################################### Installation ################################################
+################################# Installation ############################
 
 To install : Python 2.7 (https://www.python.org/downloads/)
 	     kivy library (https://kivy.org/#download)
