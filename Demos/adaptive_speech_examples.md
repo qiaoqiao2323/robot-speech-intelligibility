@@ -10,7 +10,9 @@ The default voice including volume, speed, pitch and emphsis are 1, 1, 1, 0 resp
 the default voice wav file is under the `Demo/` named default_voice
 
 We randomly picked 4 participants in the evaluation process, we recorded the robot's voice next to the speaker of the robot and without any ambient played.
-some samples of the ambient sound are under the `Ambient_noise/Demo/` 
+The recording may not be really good as the limitation of the recording device.
+
+
 the adaptive voice of participants 1 wav file is under the `Demo/` named P1
 the adaptive voice of participants 2 wav file is under the `Demo/` named P2
 the adaptive voice of participants 3 wav file is under the `Demo/` named P3
