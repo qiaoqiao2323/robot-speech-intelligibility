@@ -1,6 +1,6 @@
 # Robot-speech-intelligibility
 
-This repository contains the dataset and code associated with the paper "No More Mumbles: Enhancing Robot Intelligibility through Speech Adaptation", by Qiaoqiao Ren, Yuanbo Hou, Thomas Demeester, and Tony Belpaeme.
+This repository contains the dataset and code associated with the paper "No More Mumbles: Enhancing Robot Intelligibility through Speech Adaptation", by Qiaoqiao Ren, Yuanbo Hou, Dick Botteldooren, and Tony Belpaeme.
 
 In this work, we built an adaptive system that improves the robot's speech intelligibility in various spaces to adapt to different users.
 
