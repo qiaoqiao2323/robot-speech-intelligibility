@@ -14,29 +14,10 @@ Modify the IP address in the file by replacing it with the IP address given by t
 The IP address should be like : 192.168.1.13
 Save the "data.txt" file.
 
-## Run the game
-We used the following commands to train and evaluate the BART model on this task:
-
-```
-parlai train_model -m bart --init-model zoo:bart/bart_large/model -mf <MODEL_OUTPUT_FILE> -t internal:opener_text_lowfreq -bs 24 --fp16 true -eps 10 -lr 1e-6 --optimizer adam --inference beam --beam-size 5 --validation-every-n-epochs 8 --metrics all --validation-metric bleu-4
-```
-```
-parlai eval_model -mf <TRAINED_MODEL_FILE> -t internal:opener_text -dt test -rf <EVALUATION_OUTPUT_FILE> --save-world-logs True --inference beam --beam-size 5
-```
-
 A window will appear on the screen requesting the ID of the participant.
 The participant ID permits to save different observations collected during the word recognition test in a file text proper to 
 the participant.
 Two participants can't have the same ID.
-
-To collect each information, close the window by just using the button "close the BART test".
-The button "close the test" appears in the end window when the test is over.
-To show the end window, you can use two methods :
-	1.Finish the test after using 50 words.
-	2.Use the "quit" button and after push the "yes" button to confirm the end of the experiment.
-
-If another  method is used to close the test, some data will be lost (points earned, time in millisecond between
-two clicks, the time in seconds on the game and the time of the end of the experiment).
 
 To access at results files, go to the "word_recognition" folder and after in the "results" folder.
 Names of results files are in the shape of "results_participantID.txt".
