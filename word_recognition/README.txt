@@ -14,13 +14,6 @@ Modify the IP address in the file by replacing it with the IP address given by t
 The IP address should be like : 192.168.1.13
 Save the "data.txt" file.
 
-A window will appear on the screen requesting the ID of the participant.
-The participant ID permits to save different observations collected during the word recognition test in a file text proper to 
-the participant.
-Two participants can't have the same ID.
-
-To access at results files, go to the "word_recognition" folder and after in the "results" folder.
-Names of results files are in the shape of "results_participantID.txt".
 
 ###################################################################################################################
 ############################################## aim of the test ####################################################
